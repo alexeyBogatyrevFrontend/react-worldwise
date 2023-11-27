@@ -7,6 +7,7 @@ import Login from './pages/Login/Login'
 import AppLayout from './pages/AppLayout/AppLayout'
 import PageNotFound from './pages/PageNotFound'
 import CityList from './components/CityList/CityList'
+import CountryList from './components/CountryList/CountryList'
 
 const BASE_URL = 'http://localhost:8000'
 
@@ -46,8 +47,6 @@ const App = () => {
 		fetchData()
 	}, [])
 
-	console.log(cities)
-
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -64,7 +63,10 @@ const App = () => {
 						path='cities'
 						element={<CityList cities={cities} isLoading={isLoading} />}
 					/>
-					<Route path='countries' element={<p>countries</p>} />
+					<Route
+						path='countries'
+						element={<CountryList cities={cities} isLoading={isLoading} />}
+					/>
 					<Route path='form' element={<p>form</p>} />
 				</Route>
 				<Route path='*' element={<PageNotFound />} />
