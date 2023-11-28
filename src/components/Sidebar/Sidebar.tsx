@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import AppNav from '../AppNav/AppNav'
 import Logo from '../Logo/Logo'
 import styles from './Sidebar.module.css'
@@ -6,7 +6,9 @@ import styles from './Sidebar.module.css'
 const Sidebar = () => {
 	return (
 		<div className={styles.sidebar}>
-			<Logo />
+			<Link to='/'>
+				<Logo />
+			</Link>
 			<AppNav />
 
 			<Outlet />
