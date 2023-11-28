@@ -1,16 +1,12 @@
-import { FC } from 'react'
-import { CityType } from '../../App'
 import styles from './CountryList.module.css'
 import Spinner from '../Spinner/Spinner'
 import Message from '../Message/Message'
 import CountryItem from '../CountryItem/CountryItem'
+import { useCities } from '../../contexts/CitiesProvider'
 
-type CountryListProps = {
-	cities: CityType[]
-	isLoading: boolean
-}
+const CountryList = () => {
+	const { cities, isLoading } = useCities()
 
-const CountryList: FC<CountryListProps> = ({ cities, isLoading }) => {
 	if (isLoading) return <Spinner />
 
 	if (!cities.length)
