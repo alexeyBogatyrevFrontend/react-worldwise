@@ -1,112 +1,16 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "cityName": "Villamalur",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2023-11-30T09:41:51.794Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "39.946595007738985",
+        "lng": "-0.42984008789062506"
       },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Almaty",
-      "country": "Kazakhstan",
-      "emoji": "🇰🇿",
-      "date": "2023-11-30T02:54:28.813Z",
-      "notes": "asdfsdf",
-      "position": {
-        "lat": "43.219938797245895",
-        "lng": "76.83391571044923"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Tura",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2023-11-30T02:59:07.748Z",
-      "notes": "russia test\n",
-      "position": {
-        "lat": "63.93737246791484",
-        "lng": "97.3828125"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Atasu",
-      "country": "Kazakhstan",
-      "emoji": "🇰🇿",
-      "date": "2023-11-30T03:00:23.882Z",
-      "notes": "ddd",
-      "position": {
-        "lat": "46.800059446787316",
-        "lng": "68.90625000000001"
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Sandover",
-      "country": "Australia",
-      "emoji": "🇦🇺",
-      "date": "2023-11-30T03:03:17.127Z",
-      "notes": "ddd australia",
-      "position": {
-        "lat": "-21.94304553343818",
-        "lng": "134.64843750000003"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Ota",
-      "country": "Japan",
-      "emoji": "🇯🇵",
-      "date": "2023-11-30T03:05:13.901Z",
-      "notes": "japan",
-      "position": {
-        "lat": "36.31512514748051",
-        "lng": "139.39453125000003"
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "Claveria",
-      "country": "Philippines (the)",
-      "emoji": "🇵🇭",
-      "date": "2023-11-30T03:06:40.983Z",
-      "notes": "dddd",
-      "position": {
-        "lat": "12.726084296948196",
-        "lng": "123.22265625000001"
-      },
-      "id": 98443203
+      "id": 1
     }
   ]
 }

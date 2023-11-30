@@ -6,7 +6,7 @@ import {
 	useEffect,
 	useState,
 } from 'react'
-import { CityType, Position } from '../App'
+import { CityType } from '../App'
 
 const BASE_URL = 'http://localhost:8000'
 
@@ -28,6 +28,7 @@ type CitiesContextTypes = {
 	currentCity: currentCityType
 	getCity: (id: string) => Promise<void>
 	createCity: (newCity: CityType) => Promise<void>
+	deleteCity: (id: number) => Promise<void>
 }
 
 const CitiesContext = createContext<CitiesContextTypes>({
@@ -41,7 +42,8 @@ const CitiesContext = createContext<CitiesContextTypes>({
 		notes: '',
 	},
 	getCity: async (id: string) => {},
-	createCity: async (newCity: {}) => {},
+	createCity: async (newCity: CityType) => {},
+	deleteCity: async (id: number) => {},
 })
 
 const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
@@ -100,7 +102,22 @@ const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
 
 			setCities(prev => [...prev, data])
 		} catch (error) {
-			alert('There was an error loading data...')
+			alert('There was an error creating city.')
+		} finally {
+			setIsLoading(false)
+		}
+	}
+
+	const deleteCity = async (id: number) => {
+		try {
+			setIsLoading(true)
+			await fetch(`${BASE_URL}/cities/${id}`, {
+				method: 'DELETE',
+			})
+
+			setCities(prev => prev.filter(city => city.id !== id))
+		} catch (error) {
+			alert('There was an error deleting city.')
 		} finally {
 			setIsLoading(false)
 		}
@@ -108,7 +125,14 @@ const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
 
 	return (
 		<CitiesContext.Provider
-			value={{ cities, isLoading, currentCity, getCity, createCity }}
+			value={{
+				cities,
+				isLoading,
+				currentCity,
+				getCity,
+				createCity,
+				deleteCity,
+			}}
 		>
 			{children}
 		</CitiesContext.Provider>

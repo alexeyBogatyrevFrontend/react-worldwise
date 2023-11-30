@@ -13,6 +13,7 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { useCities } from '../../contexts/CitiesProvider'
 import { useNavigate } from 'react-router-dom'
+import { convertToEmoji } from '../../utils/convertToEmoji'
 
 const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
 
@@ -58,15 +59,6 @@ export type Administrative = {
 	isoCode?: string
 	wikidataId: string
 	geonameId: number
-}
-
-export function convertToEmoji(countryCode: string) {
-	const codePoints = countryCode
-		.toUpperCase()
-		.split('')
-		.map(char => 127397 + char.charCodeAt())
-
-	return String.fromCodePoint(...codePoints)
 }
 
 function Form() {
@@ -159,7 +151,7 @@ function Form() {
 				<DatePicker
 					id='date'
 					selected={date}
-					onChange={date => setDate(date)}
+					onChange={(date: Date) => setDate(date)}
 					dateFormat='dd/MM/yyyy'
 				/>
 			</div>

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, MouseEvent } from 'react'
 import { CityType } from '../../App'
 import styles from './CityItem.module.css'
 import { formatDate } from '../../utils/formatDate'
@@ -10,8 +10,13 @@ type CityItemProps = {
 }
 
 const CityItem: FC<CityItemProps> = ({ city }) => {
-	const { currentCity } = useCities()
+	const { currentCity, deleteCity } = useCities()
 	const { cityName, emoji, date, id, position } = city
+
+	const clickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault()
+		deleteCity(city.id)
+	}
 
 	return (
 		<li>
@@ -24,7 +29,9 @@ const CityItem: FC<CityItemProps> = ({ city }) => {
 				<span className={styles.emoji}>{emoji}</span>
 				<h3 className={styles.name}>{cityName}</h3>
 				<time className={styles.date}>({formatDate(date)})</time>
-				<button className={styles.deleteBtn}>&times;</button>
+				<button className={styles.deleteBtn} onClick={clickHandler}>
+					&times;
+				</button>
 			</Link>
 		</li>
 	)
