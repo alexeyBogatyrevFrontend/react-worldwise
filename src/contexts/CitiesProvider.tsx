@@ -6,7 +6,7 @@ import {
 	useEffect,
 	useState,
 } from 'react'
-import { CityType } from '../App'
+import { CityType, Position } from '../App'
 
 const BASE_URL = 'http://localhost:8000'
 
@@ -27,6 +27,7 @@ type CitiesContextTypes = {
 	isLoading: boolean
 	currentCity: currentCityType
 	getCity: (id: string) => Promise<void>
+	createCity: (newCity: CityType) => Promise<void>
 }
 
 const CitiesContext = createContext<CitiesContextTypes>({
@@ -40,6 +41,7 @@ const CitiesContext = createContext<CitiesContextTypes>({
 		notes: '',
 	},
 	getCity: async (id: string) => {},
+	createCity: async (newCity: {}) => {},
 })
 
 const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
@@ -84,8 +86,30 @@ const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
 		}
 	}
 
+	const createCity = async (newCity: CityType) => {
+		try {
+			setIsLoading(true)
+			const res = await fetch(`${BASE_URL}/cities`, {
+				method: 'POST',
+				body: JSON.stringify(newCity),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+			const data = await res.json()
+
+			setCities(prev => [...prev, data])
+		} catch (error) {
+			alert('There was an error loading data...')
+		} finally {
+			setIsLoading(false)
+		}
+	}
+
 	return (
-		<CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity }}>
+		<CitiesContext.Provider
+			value={{ cities, isLoading, currentCity, getCity, createCity }}
+		>
 			{children}
 		</CitiesContext.Provider>
 	)
