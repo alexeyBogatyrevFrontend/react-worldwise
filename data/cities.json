@@ -1,16 +1,3 @@
 {
-  "cities": [
-    {
-      "cityName": "Villamalur",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-11-30T09:41:51.794Z",
-      "notes": "",
-      "position": {
-        "lat": "39.946595007738985",
-        "lng": "-0.42984008789062506"
-      },
-      "id": 1
-    }
-  ]
+  "cities": []
 }
