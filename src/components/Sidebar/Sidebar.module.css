@@ -1,4 +1,5 @@
 .sidebar {
+	min-width: 550px;
 	background-color: var(--color-dark--1);
 	padding: 3rem;
 	display: flex;
@@ -18,6 +19,7 @@
 
 @media (max-width: 768px) {
 	.sidebar {
+		min-width: auto;
 		height: fit-content;
 		max-height: 70%;
 	}

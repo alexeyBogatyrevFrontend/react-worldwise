@@ -14,6 +14,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import { useCities } from '../../contexts/CitiesProvider'
 import { useNavigate } from 'react-router-dom'
 import { convertToEmoji } from '../../utils/convertToEmoji'
+import { v4 as uuidv4 } from 'uuid'
 
 const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
 
@@ -112,12 +113,13 @@ function Form() {
 		if (!cityName || !date) return
 
 		const newCity = {
+			id: parseFloat(uuidv4()),
 			cityName,
 			country,
 			emoji,
-			date,
+			date: date.toISOString(),
 			notes,
-			position: { lat, lng },
+			position: { lat: parseFloat(lat), lng: parseFloat(lng) },
 		}
 
 		await createCity(newCity)

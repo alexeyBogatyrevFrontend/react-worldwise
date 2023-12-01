@@ -15,7 +15,7 @@ type CitiesProviderProps = {
 }
 
 type currentCityType = {
-	id: string
+	id: number
 	cityName: string
 	emoji: string
 	date: string
@@ -35,21 +35,28 @@ const CitiesContext = createContext<CitiesContextTypes>({
 	cities: [],
 	isLoading: false,
 	currentCity: {
-		id: '',
+		id: 0,
 		cityName: '',
 		emoji: '',
 		date: '',
 		notes: '',
 	},
-	getCity: async (id: string) => {},
-	createCity: async (newCity: CityType) => {},
-	deleteCity: async (id: number) => {},
+
+	getCity: async (id: string) => {
+		console.log(id)
+	},
+	createCity: async (newCity: CityType) => {
+		console.log(newCity)
+	},
+	deleteCity: async (id: number) => {
+		console.log(id)
+	},
 })
 
 const initialState: StateType = {
 	cities: [],
 	isLoading: false,
-	currentCity: { id: '', cityName: '', emoji: '', date: '', notes: '' },
+	currentCity: { id: 0, cityName: '', emoji: '', date: '', notes: '' },
 	error: '',
 }
 
@@ -88,7 +95,13 @@ const reducer = (state: StateType, action: ActionType): StateType => {
 				...state,
 				isLoading: false,
 				cities: state.cities.filter(city => city.id !== action.payload),
-				currentCity: {},
+				currentCity: {
+					id: 0,
+					cityName: '',
+					emoji: '',
+					date: '',
+					notes: '',
+				},
 			}
 		case 'rejected':
 			return { ...state, isLoading: false, error: action.payload }
@@ -124,7 +137,7 @@ const CitiesProvider: FC<CitiesProviderProps> = ({ children }) => {
 	}, [])
 
 	const getCity = async (id: string) => {
-		if (+id === currentCity.id) return
+		if (+id === +currentCity.id) return
 
 		dispatch({ type: 'loading' })
 		try {

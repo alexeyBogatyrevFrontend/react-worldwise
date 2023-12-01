@@ -42,6 +42,7 @@ const Map = () => {
 				</Button>
 			)}
 			<MapContainer
+				// @ts-expect-error: something wrong with library
 				center={mapPosition}
 				zoom={10}
 				scrollWheelZoom={true}
@@ -62,7 +63,10 @@ const Map = () => {
 						</Popup>
 					</Marker>
 				))}
-				<ChangeCenter position={mapPosition} />
+				<ChangeCenter
+					// @ts-expect-error: something wrong with library
+					position={mapPosition}
+				/>
 				<DetectClick />
 			</MapContainer>
 		</div>

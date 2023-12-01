@@ -1,16 +1,100 @@
 {
   "cities": [
     {
-      "cityName": "Gor’kovskoye",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2023-12-01T09:18:37.145Z",
-      "notes": "ddd",
+      "id": 1,
+      "cityName": "Cantavieja",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-01T09:56:31.238Z",
+      "notes": "",
       "position": {
-        "lat": "55.41803431658394",
-        "lng": "74.36645507812501"
-      },
-      "id": 1
+        "lat": 40.48873742102282,
+        "lng": -0.35293579101562506
+      }
+    },
+    {
+      "id": 2,
+      "cityName": "Almaty",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:48.593Z",
+      "notes": "",
+      "position": {
+        "lat": 43.265206318396025,
+        "lng": 76.89743041992189
+      }
+    },
+    {
+      "id": 3,
+      "cityName": "Otegen Batyra",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:51.964Z",
+      "notes": "",
+      "position": {
+        "lat": 43.55153408323952,
+        "lng": 76.74774169921876
+      }
+    },
+    {
+      "id": 5000,
+      "cityName": "Otegen Batyra",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:54.098Z",
+      "notes": "",
+      "position": {
+        "lat": 43.74133643108268,
+        "lng": 76.90979003906251
+      }
+    },
+    {
+      "id": 8052,
+      "cityName": "Talghar",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:56.064Z",
+      "notes": "",
+      "position": {
+        "lat": 43.95525928989669,
+        "lng": 77.27371215820314
+      }
+    },
+    {
+      "id": 68550,
+      "cityName": "Talghar",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:57.923Z",
+      "notes": "",
+      "position": {
+        "lat": 44.31402269883775,
+        "lng": 77.08007812500001
+      }
+    },
+    {
+      "id": 8,
+      "cityName": "Bakanas",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:56:59.527Z",
+      "notes": "",
+      "position": {
+        "lat": 44.64520822374406,
+        "lng": 76.91940307617189
+      }
+    },
+    {
+      "id": 68551,
+      "cityName": "Ushtobe",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T09:57:03.610Z",
+      "notes": "",
+      "position": {
+        "lat": 45.1510532655634,
+        "lng": 77.08007812500001
+      }
     }
   ]
 }
