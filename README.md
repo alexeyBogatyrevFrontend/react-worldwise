@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# WorldWise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+WorldWise is a web application that allows users to explore cities around the world. It provides information about various cities, including their names, emojis, dates, and notes. Users can view details about a specific city, add new cities, and delete existing ones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- City Explorer: Navigate through a list of cities to explore their details.
+- Create New Cities: Add new cities with relevant information.
+- Delete Cities: Remove unwanted cities from the list.
+Responsive Design: Enjoy a seamless experience on both desktop and mobile devices.
+## Getting Started
+To run the application and test its full functionality, follow these steps:
 
-## Expanding the ESLint configuration
+## Install dependencies:
+- npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Start the JSON server to provide the required data:
+- npm run server
 
-- Configure the top-level `parserOptions` property like this:
+## In a separate terminal, start the development server:
+- npm run dev
+- Open your browser and navigate to http://localhost:{yourport} to access WorldWise.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technologies Used
+- React
+- TypeScript
+- Vite
+- JSON Server
+- Leaflet
+- React Router
+- React DatePicker
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# RU
+
+
+WorldWise - это веб-приложение, которое позволяет пользователям исследовать города по всему миру. Он предоставляет информацию о различных городах, включая их названия, эмодзи, даты и заметки. Пользователи могут просматривать подробности о конкретном городе, добавлять новые города и удалять существующие.
+
+## Возможности
+- City Explorer: Переходите по списку городов, чтобы изучить их детали.
+- Создание новых городов: Добавление новых городов с соответствующей информацией.
+- У даление городов: Удаление ненужных городов из списка.
+- Отзывчивый дизайн: Наслаждайтесь бесперебойным опытом как на компьютерах, так и на мобильных устройствах.
+## Начало работы
+Чтобы запустить приложение и протестировать его полную функциональность, выполните следующие шаги:
+
+## Установите зависимости:
+- npm install
+
+## Запустите JSON-сервер для предоставления необходимых данных:
+- npm run server
+
+## В отдельном терминале запустите сервер разработки:
+- npm run dev
+- Откройте браузер и перейдите по адресу http://localhost:{вашпорт}, чтобы получить доступ к WorldWise.
+
+##Используемые технологии
+- React
+- TypeScript
+- Vite
+- JSON Server
+- Leaflet
+- React Router
+- React DatePicker
