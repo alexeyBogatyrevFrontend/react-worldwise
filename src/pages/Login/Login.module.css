@@ -1,26 +1,35 @@
 .login {
-  margin: 2.5rem;
-  padding: 2.5rem 5rem;
-  background-color: var(--color-dark--1);
-  min-height: calc(100vh - 5rem);
+	margin: 2.5rem;
+	padding: 2.5rem 5rem;
+	background-color: var(--color-dark--1);
+	min-height: calc(100vh - 5rem);
 }
 
 .form {
-  background-color: var(--color-dark--2);
-  border-radius: 7px;
-  padding: 2rem 3rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  /* Different from other form */
-  width: 48rem;
-  margin: 8rem auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--color-dark--2);
+	border-radius: 7px;
+	padding: 2rem 3rem;
+	width: 90%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.login {
+		margin: 0;
+		padding: 2rem;
+		min-height: 100vh;
+	}
 }
