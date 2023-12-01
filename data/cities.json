@@ -1,3 +1,28 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Almaty",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T06:33:56.055Z",
+      "notes": "ddd",
+      "position": {
+        "lat": "43.242201615842134",
+        "lng": "76.87957763671876"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Priozersk",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-12-01T07:55:25.143Z",
+      "notes": "ddd",
+      "position": {
+        "lat": "46.029507990446355",
+        "lng": "73.6897659301758"
+      },
+      "id": 2
+    }
+  ]
 }
