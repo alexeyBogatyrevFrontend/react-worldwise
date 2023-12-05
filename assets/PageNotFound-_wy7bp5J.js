@@ -1,0 +1,1 @@
+import{j as o}from"./index-Rhu0Cu-0.js";import{P as r}from"./PageNav-GMFwynKV.js";import"./Logo-SCAimawz.js";function s(){return o.jsxs("div",{children:[o.jsx(r,{}),o.jsx("h1",{children:"Page not found 😢"})]})}export{s as default};
