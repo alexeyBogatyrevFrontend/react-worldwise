@@ -1,54 +1,6 @@
 {
   "cities": [
     {
-      "id": 1,
-      "cityName": "Cantavieja",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-12-01T09:56:31.238Z",
-      "notes": "",
-      "position": {
-        "lat": 40.48873742102282,
-        "lng": -0.35293579101562506
-      }
-    },
-    {
-      "id": 2,
-      "cityName": "Almaty",
-      "country": "Kazakhstan",
-      "emoji": "🇰🇿",
-      "date": "2023-12-01T09:56:48.593Z",
-      "notes": "",
-      "position": {
-        "lat": 43.265206318396025,
-        "lng": 76.89743041992189
-      }
-    },
-    {
-      "id": 3,
-      "cityName": "Otegen Batyra",
-      "country": "Kazakhstan",
-      "emoji": "🇰🇿",
-      "date": "2023-12-01T09:56:51.964Z",
-      "notes": "",
-      "position": {
-        "lat": 43.55153408323952,
-        "lng": 76.74774169921876
-      }
-    },
-    {
-      "id": 5000,
-      "cityName": "Otegen Batyra",
-      "country": "Kazakhstan",
-      "emoji": "🇰🇿",
-      "date": "2023-12-01T09:56:54.098Z",
-      "notes": "",
-      "position": {
-        "lat": 43.74133643108268,
-        "lng": 76.90979003906251
-      }
-    },
-    {
       "id": 8052,
       "cityName": "Talghar",
       "country": "Kazakhstan",
